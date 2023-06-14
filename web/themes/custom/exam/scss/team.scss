@@ -57,9 +57,9 @@
 
 // start styles for employee node (full)
 .node--employee-full {
-  margin-bottom: 100px;
+  margin: 100px 0;
   @media (max-width: $tablet) {
-    margin-bottom: 50px;
+    margin: 50px 0;
   }
   .field--name-title {
     display: block;

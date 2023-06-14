@@ -96,3 +96,8 @@
   }
 }
 // end styles for webform
+
+// styles for confirmation/failure messages on form submissions
+.messages {
+  @extend .container;
+}
