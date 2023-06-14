@@ -41,6 +41,12 @@
 #block-views-block-projects-content-block-2 .view-content {
   margin-bottom: 45px;
 }
+#block-views-block-projects-content-block-2 .views-row {
+  height: 100%;
+}
+#block-views-block-projects-content-block-2 .node--project-teaser {
+  border-bottom: 2px solid #373645;
+}
 
 .node--project.php-development .field--name-field-project-service-type a {
   color: #a061b9;
@@ -56,12 +62,16 @@
 }
 
 .node--project-teaser {
-  border-bottom: 2px solid #373645;
   padding-bottom: 25px;
   background-color: #fff;
+  height: 100%;
+}
+.node--project-teaser .node__content, .node--project-teaser .layout--onecol {
+  height: 100%;
 }
 .node--project-teaser .layout__region--content {
   text-align: center;
+  height: 100%;
 }
 .node--project-teaser .layout__region--content .field--name-field-main img {
   width: 100%;
@@ -78,6 +88,7 @@
   color: #373645;
   text-transform: uppercase;
   font-size: 23px;
+  margin-bottom: 5px;
   margin-bottom: 5px;
 }
 .node--project-teaser .layout__region--content .field--name-title:hover {
@@ -104,6 +115,13 @@
   font-family: "Lato", sans-serif;
   font-weight: 400;
   margin-bottom: 18px;
+}
+.node--project-teaser .layout__region--content {
+  display: flex;
+  flex-direction: column;
+}
+.node--project-teaser .block-field-blocknodeprojectfield-read-more-link {
+  margin-top: auto;
 }
 
 .node--project-full {
@@ -202,17 +220,6 @@ h2.block-views-blockproject-term-block-1.block-title:before, h2.block-views-bloc
 }
 h2.block-views-blockproject-term-block-1.block-title:after {
   margin: 0 -55% 0 0.5em;
-}
-
-#block-exam-content .view-projects-content .node--project-teaser, #block-exam-content .view-projects-content .node__content, #block-exam-content .view-projects-content .layout, #block-exam-content .view-projects-content .layout__region--content {
-  height: 100%;
-}
-#block-exam-content .view-projects-content .layout__region--content {
-  display: flex;
-  flex-direction: column;
-}
-#block-exam-content .view-projects-content .block-field-blocknodeprojectfield-read-more-link {
-  margin-top: auto;
 }
 
 /*# sourceMappingURL=projects.css.map */

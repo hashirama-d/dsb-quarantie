@@ -20,9 +20,12 @@
   .view-content {
     margin-bottom: 45px;
   }
-  //.views-row {
-  //  border-bottom: 2px solid $branding-bg;
-  //}
+  .views-row {
+    height: 100%;
+  }
+  .node--project-teaser {
+    border-bottom: 2px solid $branding-bg;
+  }
 }
 
 // start styles for taxonomy field
@@ -52,11 +55,16 @@
 
 // start styles for project node (teaser)
 .node--project-teaser {
-  border-bottom: 2px solid $branding-bg;
+  //border-bottom: 2px solid $branding-bg;
   padding-bottom: 25px;
   background-color: #fff;
+  height: 100%;
+  .node__content, .layout--onecol {
+    height: 100%;
+  }
   .layout__region--content {
     text-align: center;
+    height: 100%;
     .field--name-field-main img {
       width: 100%;
       max-width: 290px;
@@ -77,6 +85,14 @@
       font-weight: 400;
       margin-bottom: 18px;
     }
+  }
+  .layout__region--content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .block-field-blocknodeprojectfield-read-more-link {
+    margin-top: auto;
   }
 }
 // end styles for project node (teaser)
@@ -149,18 +165,5 @@ h2.block-views-blockproject-term-block-1.block-title {
   margin-top: 50px;
 }
 
-// fix to align items with different height in a view row
-#block-exam-content {
-  .view-projects-content {
-    .node--project-teaser, .node__content, .layout, .layout__region--content {
-      height: 100%;
-    }
-    .layout__region--content {
-      display: flex;
-      flex-direction: column;
-    }
-    .block-field-blocknodeprojectfield-read-more-link {
-      margin-top: auto;
-    }
-  }
-}
+
+
