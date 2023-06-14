@@ -1,0 +1,50 @@
+html, body, .dialog-off-canvas-main-canvas, .page {
+  height: 100%;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-title {
+  width: 100%;
+  margin: 20px auto 50px;
+  overflow: hidden;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  font-family: "Lato", sans-serif;
+  color: #373645;
+  text-transform: uppercase;
+  margin-top: 50px;
+}
+.page-title:before, .page-title:after {
+  content: "";
+  display: inline-block;
+  width: 50%;
+  margin: 0 0.5em 0 -55%;
+  vertical-align: middle;
+  border-bottom: 2px solid #e8e8e8;
+}
+.page-title:after {
+  margin: 0 -55% 0 0.5em;
+}
+
+.social-link-field {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  margin: 0 10px;
+}
+.social-link-field li {
+  padding: 0 5px;
+  width: 35px;
+  height: 25px;
+}
+.social-link-field li i {
+  font-size: 25px;
+  color: #6E9ACA;
+}
+
+/*# sourceMappingURL=global.css.map */

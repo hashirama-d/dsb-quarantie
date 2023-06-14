@@ -1,0 +1,96 @@
+@import "variables";
+@import "mixins";
+
+.views-row {
+  margin-bottom: 25px;
+}
+
+// start styles for view with no results
+.view-empty {
+  .field--name-body {
+    padding: 50px 0;
+    p {
+      @include front-item-title-teaser();
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+// end styles for view with no results
+
+// start styles for 4-column view layout
+.front-4-col .view-content{
+  & > div {
+    max-width: 350px;
+  }
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  @media (max-width: $desktopSmall) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: $phone) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  row-gap: 30px;
+  column-gap: 30px;
+}
+// end styles for 4-column view layout
+
+// start styles for 2-column view layout
+.front-2-col .view-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  @media (max-width: $tablet) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  row-gap: 30px;
+  column-gap: 30px;
+}
+// end styles for 2-column view layout
+
+
+// start styles for views pager
+.pager {
+  .js-pager__items {
+    .pager__item {
+      font-family: $text-font;
+      color: #696969;
+      width: 30px;
+      height: 30px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      &.is-active{
+        font-weight: 400;
+        border-radius: 50%;
+        background-color: $dark-gray;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+      &--next, &--previous, &--first, &--last {
+        font-size: 24px;
+      }
+    }
+  }
+}
+#block-exam-content {
+  .pager__items {
+    margin: 50px 0;
+    .pager__item {
+      width: 50px;
+      height: 50px;
+      font-size: 22px;
+      &--next, &--previous, &--first, &--last {
+        font-size: 36px;
+      }
+    }
+  }
+}
+.view-index-all-content {
+  margin-top: 50px;
+}
+// end styles for views pager

@@ -1,0 +1,60 @@
+@import "variables";
+// start generic settings for footer
+footer.footer {
+  margin-top: auto;
+  background-color: $branding-bg;
+}
+.region-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 190px;
+}
+// end generic settings for footer
+
+// start styles for branding in footer
+.block-system-branding-block {
+  height: 100%;
+  font-family: $branding-font;
+  color: #c3c2c7;
+  text-align: center;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @media (max-width: $phone) {
+    height: 90px;
+
+    font-size: 12px;
+    min-width: 180px;
+  }
+  .site-name {
+    color: $branding-color;
+    font-weight: 500;
+    font-size: 32px;
+    @media (max-width: $phone) {
+      font-size: 24px;
+    }
+  }
+}
+// end styles for branding in footer
+
+
+// start styles for social links in footer
+#block-sociallinks-2 {
+  .social-link-field {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    li {
+      padding: 0 5px;
+      width: 35px;
+      height: 25px;
+      i {
+        font-size: 25px;
+        color: $branding-color;
+      }
+    }
+  }
+}
+// end styles for social links in footer

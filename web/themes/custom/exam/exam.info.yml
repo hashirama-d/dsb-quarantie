@@ -1,0 +1,16 @@
+name: "Exam Theme"
+description: "Custom Theme"
+type: "theme"
+core_version_requirement: 9.x
+base theme: classy
+
+libraries:
+  - exam/global
+  - exam/global-scripts
+
+regions:
+  header: Header
+  primary_menu: "Primary menu"
+  highlighted: Highlighted
+  content: Content
+  footer: Footer
