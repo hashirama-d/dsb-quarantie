@@ -1,0 +1,18 @@
+@import "variables";
+@import "mixins";
+
+.view-id-index_all_content {
+  .views-field-title {
+    @include front-item-title-teaser();
+    text-align: left;
+  }
+  .views-field-summary {
+    @include front-item-text-teaser();
+    text-align: left;
+    color: $branding-bg;
+  }
+  margin: 50px 0 100px;
+  @media (max-width: $tablet) {
+    margin: 50px 0;
+  }
+}
