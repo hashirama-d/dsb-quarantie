@@ -20,9 +20,9 @@
   .view-content {
     margin-bottom: 45px;
   }
-  .views-row {
-    border-bottom: 2px solid $branding-bg;
-  }
+  //.views-row {
+  //  border-bottom: 2px solid $branding-bg;
+  //}
 }
 
 // start styles for taxonomy field
@@ -52,6 +52,9 @@
 
 // start styles for project node (teaser)
 .node--project-teaser {
+  border-bottom: 2px solid $branding-bg;
+  padding-bottom: 25px;
+  background-color: #fff;
   .layout__region--content {
     text-align: center;
     .field--name-field-main img {
