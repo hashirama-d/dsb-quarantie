@@ -6,7 +6,7 @@
     @include front-item-title-teaser();
     text-align: left;
   }
-  .views-field-summary {
+  .views-field-body {
     @include front-item-text-teaser();
     text-align: left;
     color: $branding-bg;

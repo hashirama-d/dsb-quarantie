@@ -16,7 +16,7 @@
 .view-id-index_all_content .views-field-title:hover {
   text-decoration: underline;
 }
-.view-id-index_all_content .views-field-summary {
+.view-id-index_all_content .views-field-body {
   font-size: 12px;
   font-family: "Lato", sans-serif;
   font-weight: 400;
