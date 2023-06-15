@@ -55,6 +55,11 @@
   margin: 0;
   padding: 0 10px;
 }
+@media (max-width: 468px) {
+  #block-aboutblock .field--name-body {
+    font-size: 18px;
+  }
+}
 #block-aboutblock .field--name-field-read-more {
   font-size: 14px;
   padding: 8px 0;

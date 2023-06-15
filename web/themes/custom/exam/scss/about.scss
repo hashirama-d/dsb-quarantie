@@ -46,6 +46,9 @@
     font-size: 20px;
     margin: 0;
     padding: 0 10px;
+    @media (max-width: $phone) {
+      font-size: 18px;
+    }
   }
   .field--name-field-read-more {
     @include read-more-btn-teaser();
