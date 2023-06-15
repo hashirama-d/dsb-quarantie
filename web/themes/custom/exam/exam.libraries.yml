@@ -21,7 +21,9 @@ global:
       css/news.css: {}
       css/contact-us.css: {}
       css/clients.css: {}
-
+      css/search.css: {}
+      css/login.css: {}
+      css/profile.css: {}
 
 global-scripts:
   js:
