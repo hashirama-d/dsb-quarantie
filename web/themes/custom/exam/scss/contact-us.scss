@@ -100,4 +100,5 @@
 // styles for confirmation/failure messages on form submissions
 .messages {
   @extend .container;
+  margin-top: 50px;
 }
