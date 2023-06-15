@@ -100,11 +100,16 @@
             .menu-item a {
               margin-top: 10px;
               padding-bottom: 15px;
-
             }
             .menu-icon-1 a { // styles for home icon
               height: 80px;
             }
+          }
+          @media (max-width: $tablet) {
+            top: 185px;
+          }
+          @media (max-width: $phone) {
+            top: 160px;
           }
         }
         &-item a {

@@ -117,6 +117,16 @@
     height: 80px;
   }
 }
+@media (max-width: 862px) {
+  .header .region-header .block-menu .menu.active {
+    top: 185px;
+  }
+}
+@media (max-width: 468px) {
+  .header .region-header .block-menu .menu.active {
+    top: 160px;
+  }
+}
 .header .region-header .block-menu .menu-item a {
   margin: 0 10px;
   font-family: "Lato", sans-serif;
