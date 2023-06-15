@@ -1,0 +1,11 @@
+@import "mixins";
+.profile {
+  margin: 50px 0;
+  .form-item {
+    @include front-item-title-teaser();
+    text-align: left;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

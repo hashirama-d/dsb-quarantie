@@ -1,0 +1,23 @@
+.profile {
+  margin: 50px 0;
+}
+.profile .form-item {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  color: #373645;
+  text-transform: uppercase;
+  font-size: 23px;
+  margin-bottom: 5px;
+  text-align: left;
+}
+.profile .form-item:hover {
+  text-decoration: underline;
+}
+.profile .form-item:hover {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=profile.css.map */
