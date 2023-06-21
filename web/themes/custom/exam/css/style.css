@@ -526,6 +526,11 @@ footer.footer {
   background-color: #fff;
   box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.6);
 }
+@media (max-width: 1024px) {
+  .header .region-header {
+    background-color: #373645;
+  }
+}
 .header .region-header .block-system-branding-block {
   height: 115px;
   min-width: 235px;
@@ -563,6 +568,11 @@ footer.footer {
   margin: 0 auto;
   display: flex;
 }
+@media (max-width: 468px) {
+  .header .region-header .block-menu {
+    margin-right: 30px;
+  }
+}
 .header .region-header .block-menu .burger-menu-btn {
   display: none;
   outline: none;
@@ -579,6 +589,11 @@ footer.footer {
   .header .region-header .block-menu .burger-menu-btn {
     display: block;
     margin-left: auto;
+  }
+}
+@media (max-width: 1024px) {
+  .header .region-header .block-menu .burger-menu-btn {
+    background-image: url("https://img.icons8.com/ios-glyphs/60/ffffff/menu--v1.png");
   }
 }
 @media (max-width: 862px) {
@@ -627,9 +642,9 @@ footer.footer {
     height: 80px;
   }
 }
-@media (max-width: 862px) {
+@media (max-width: 580px) {
   .header .region-header .block-menu .menu.active {
-    top: 185px;
+    top: 90px;
   }
 }
 @media (max-width: 468px) {
@@ -711,6 +726,12 @@ footer.footer {
   padding: 0 10px;
   border: 2px solid #E8E8E8;
   border-right-width: 1px;
+}
+@media (max-width: 1024px) {
+  .header .region-header .block-views-exposed-filter-blockindex-all-content-page-1 .form--inline .form-text {
+    background-color: #373645;
+    color: #fff;
+  }
 }
 @media (max-width: 580px) {
   .header .region-header .block-views-exposed-filter-blockindex-all-content-page-1 .form--inline .form-text {
