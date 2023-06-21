@@ -1,0 +1,41 @@
+uuid: d3258dcd-9df5-4d15-bc80-6bd2bc4ff8d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.about_block
+    - field.storage.block_content.field_about_paragraph
+    - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.remote_video
+    - paragraphs.paragraphs_type.text_paragraph
+  module:
+    - entity_reference_revisions
+id: block_content.about_block.field_about_paragraph
+field_name: field_about_paragraph
+entity_type: block_content
+bundle: about_block
+label: 'About Paragraph'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      text_paragraph: text_paragraph
+      image: image
+      remote_video: remote_video
+    negate: 0
+    target_bundles_drag_drop:
+      image:
+        weight: -6
+        enabled: true
+      remote_video:
+        weight: -5
+        enabled: true
+      text_paragraph:
+        weight: -7
+        enabled: true
+field_type: entity_reference_revisions

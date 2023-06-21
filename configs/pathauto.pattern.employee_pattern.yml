@@ -1,0 +1,22 @@
+uuid: 87b3c3e0-0361-4cb5-a2a6-d184acf0451a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: employee_pattern
+label: 'Employee pattern'
+type: 'canonical_entities:node'
+pattern: 'team/[node:title]'
+selection_criteria:
+  837d1bd2-9aa5-44da-84c3-e9c19f021c61:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 837d1bd2-9aa5-44da-84c3-e9c19f021c61
+    context_mapping:
+      node: node
+    bundles:
+      employee: employee
+selection_logic: and
+weight: -5
+relationships: {  }

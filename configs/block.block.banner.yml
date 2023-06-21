@@ -1,0 +1,30 @@
+uuid: 460d0e88-cb9d-4a87-b1e9-b0401cecedae
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:banner:c8b50e1e-2f2b-495e-b010-6dc7a179d469'
+  module:
+    - block_content
+    - system
+  theme:
+    - exam
+id: banner
+theme: exam
+region: highlighted
+weight: -12
+provider: null
+plugin: 'block_content:c8b50e1e-2f2b-495e-b010-6dc7a179d469'
+settings:
+  id: 'block_content:c8b50e1e-2f2b-495e-b010-6dc7a179d469'
+  label: Banner
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

@@ -1,0 +1,15 @@
+uuid: 07f23ae9-6a81-4da1-89a9-3e139d1477af
+langcode: en
+status: true
+dependencies:
+  config:
+    - flag.flag.like_employee
+  module:
+    - flag
+id: flag_action.like_employee_flag
+label: 'Flag this item'
+type: node
+plugin: 'flag_action:like_employee_flag'
+configuration:
+  flag_id: like_employee
+  flag_action: flag

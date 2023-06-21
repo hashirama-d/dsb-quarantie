@@ -1,0 +1,22 @@
+uuid: 8873c993-f491-4be9-86d1-113528a2d69a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.flagging.like_employee.field_like_icon
+    - flag.flag.like_employee
+  module:
+    - media_library
+id: flagging.like_employee.default
+targetEntityType: flagging
+bundle: like_employee
+mode: default
+content:
+  field_like_icon:
+    type: media_library_widget
+    weight: 0
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+hidden: {  }

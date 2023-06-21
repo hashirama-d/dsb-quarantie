@@ -1,0 +1,19 @@
+uuid: 9c3e571b-c1e8-4c8d-9f9e-ee1dc2070daf
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_us_block
+    - field.storage.block_content.field_google_map
+id: block_content.contact_us_block.field_google_map
+field_name: field_google_map
+entity_type: block_content
+bundle: contact_us_block
+label: 'Google Map'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

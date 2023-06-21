@@ -1,0 +1,21 @@
+uuid: 7f0c5342-ca81-491d-b926-b99c9b54c78d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_us_block
+    - field.storage.block_content.field_address_text_field
+  module:
+    - text
+id: block_content.contact_us_block.field_address_text_field
+field_name: field_address_text_field
+entity_type: block_content
+bundle: contact_us_block
+label: 'Address Text Field'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

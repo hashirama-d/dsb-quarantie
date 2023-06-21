@@ -1,0 +1,22 @@
+uuid: 4e779079-5d34-4abf-a409-c7be4205c9de
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - exam
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: exam_powered
+theme: exam
+region: header
+weight: -6
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

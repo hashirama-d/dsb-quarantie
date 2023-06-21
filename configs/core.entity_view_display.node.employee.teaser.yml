@@ -1,0 +1,212 @@
+uuid: f15a727c-5f8b-4b85-a129-2cf3bf779874
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.employee.body
+    - field.field.node.employee.field_main
+    - field.field.node.employee.field_occupation
+    - field.field.node.employee.field_read_more_link
+    - field.field.node.employee.field_social_li
+    - node.type.employee
+  module:
+    - field_group
+    - layout_builder
+    - layout_discovery
+    - media
+    - social_link_field
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          5f5968e6-1a6a-4980-8bb1-b79671305d7d:
+            uuid: 5f5968e6-1a6a-4980-8bb1-b79671305d7d
+            region: content
+            configuration:
+              id: 'field_block:node:employee:field_main'
+              label: 'Main image'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: media_thumbnail
+                label: hidden
+                settings:
+                  image_link: content
+                  image_style: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          84b013ea-4f9c-4272-be72-815789d3b570:
+            uuid: 84b013ea-4f9c-4272-be72-815789d3b570
+            region: content
+            configuration:
+              id: 'field_block:node:employee:field_read_more_link'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
+            weight: 5
+            additional: {  }
+          2155317f-9d3f-4cff-982c-cf95c5aea067:
+            uuid: 2155317f-9d3f-4cff-982c-cf95c5aea067
+            region: content
+            configuration:
+              id: 'field_block:node:employee:field_social_li'
+              label: 'Social links'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: font_awesome
+                label: hidden
+                settings:
+                  new_tab: 1
+                  icon_type: square
+                  orientation: vertical
+                third_party_settings: {  }
+            weight: 6
+            additional: {  }
+          5b4ce5ee-efbe-4e99-96a7-300a4fbaf4a2:
+            uuid: 5b4ce5ee-efbe-4e99-96a7-300a4fbaf4a2
+            region: content
+            configuration:
+              id: 'extra_field_block:node:employee:flag_like_employee'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 7
+            additional: {  }
+          9d2a6bbf-e2e1-467e-9f88-468478e69dbc:
+            uuid: 9d2a6bbf-e2e1-467e-9f88-468478e69dbc
+            region: content
+            configuration:
+              id: 'field_block:node:employee:field_occupation'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          ab2232e5-fb16-401c-9994-dfff68be0a0d:
+            uuid: ab2232e5-fb16-401c-9994-dfff68be0a0d
+            region: content
+            configuration:
+              id: 'field_block:node:employee:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+        third_party_settings: {  }
+  field_group:
+    group_social_likes:
+      children:
+        - field_social_li
+        - flag_like_employee
+      label: 'social likes'
+      parent_name: ''
+      region: content
+      weight: 5
+      format_type: html_element
+      format_settings:
+        classes: social-likes
+        show_empty_fields: false
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+id: node.employee.teaser
+targetEntityType: node
+bundle: employee
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_main:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_occupation:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_read_more_link:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_social_li:
+    type: font_awesome
+    label: hidden
+    settings:
+      icon_type: common
+      orientation: vertical
+      new_tab: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  flag_like_employee:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: content
+hidden:
+  links: true
+  search_api_excerpt: true

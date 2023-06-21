@@ -1,0 +1,21 @@
+uuid: 9a30d9cf-b868-4e82-8941-dec2d350c309
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_read_more_link
+    - node.type.employee
+id: node.employee.field_read_more_link
+field_name: field_read_more_link
+entity_type: node
+bundle: employee
+label: 'Read More Link'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 'Look at me'
+default_value_callback: ''
+settings: {  }
+field_type: string

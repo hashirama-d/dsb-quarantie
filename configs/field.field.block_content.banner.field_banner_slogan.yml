@@ -1,0 +1,21 @@
+uuid: 4930a260-33ee-4b18-9123-8328568defb7
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.banner
+    - field.storage.block_content.field_banner_slogan
+id: block_content.banner.field_banner_slogan
+field_name: field_banner_slogan
+entity_type: block_content
+bundle: banner
+label: 'Banner Slogan'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 'is our lifestyle'
+default_value_callback: ''
+settings: {  }
+field_type: string

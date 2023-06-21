@@ -1,0 +1,99 @@
+uuid: 564fcb4f-3877-43b3-8e9c-a134a676f670
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.banner
+    - field.field.block_content.banner.body
+    - field.field.block_content.banner.field_banner_accent_text
+    - field.field.block_content.banner.field_banner_background
+    - field.field.block_content.banner.field_banner_slogan
+    - field.field.block_content.banner.field_banner_text
+  module:
+    - field_group
+    - media
+third_party_settings:
+  field_group:
+    group_banner_content:
+      children:
+        - group_banner_box
+      label: 'Banner Content'
+      parent_name: ''
+      region: content
+      weight: 1
+      format_type: html_element
+      format_settings:
+        classes: 'banner-content container'
+        show_empty_fields: false
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+    group_banner_box:
+      children:
+        - field_banner_accent_text
+        - field_banner_slogan
+        - field_banner_text
+      label: 'Banner Box'
+      parent_name: group_banner_content
+      region: content
+      weight: 20
+      format_type: html_element
+      format_settings:
+        classes: banner-box
+        show_empty_fields: false
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+id: block_content.banner.default
+targetEntityType: block_content
+bundle: banner
+mode: default
+content:
+  field_banner_accent_text:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  field_banner_background:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: media
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_banner_slogan:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 22
+    region: content
+  field_banner_text:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 23
+    region: content
+hidden:
+  body: true
+  search_api_excerpt: true

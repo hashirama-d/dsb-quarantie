@@ -1,0 +1,40 @@
+uuid: 203e8c60-ad9b-4576-9cdf-77428f47cfc2
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.service_content
+  module:
+    - system
+    - user
+    - views
+  theme:
+    - exam
+id: views_block__service_content_block_2
+theme: exam
+region: content
+weight: -9
+provider: null
+plugin: 'views_block:service_content-block_2'
+settings:
+  id: 'views_block:service_content-block_2'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      anonymous: anonymous
+      authenticated: authenticated
+      content_editor: content_editor
+      administrator: administrator

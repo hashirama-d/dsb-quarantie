@@ -1,0 +1,25 @@
+uuid: da8b385f-fabf-4754-ab16-825e042584e3
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:social_links:78dbcb07-efcc-4dd6-b275-069e2c8d7ff8'
+  module:
+    - block_content
+  theme:
+    - exam
+id: sociallinks
+theme: exam
+region: header
+weight: -11
+provider: null
+plugin: 'block_content:78dbcb07-efcc-4dd6-b275-069e2c8d7ff8'
+settings:
+  id: 'block_content:78dbcb07-efcc-4dd6-b275-069e2c8d7ff8'
+  label: 'Social links'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

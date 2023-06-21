@@ -1,0 +1,24 @@
+uuid: 886fb2da-57bb-404d-bb65-eab0ac5d822c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_month_of_creation
+    - node.type.news_article
+  module:
+    - datetime
+id: node.news_article.field_month_of_creation
+field_name: field_month_of_creation
+entity_type: node
+bundle: news_article
+label: 'Date Month'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

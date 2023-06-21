@@ -1,0 +1,15 @@
+uuid: 330fe9d7-0512-4b5d-9657-7459493def7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - flag.flag.like_employee
+  module:
+    - flag
+id: flag_action.like_employee_unflag
+label: 'Unflag this item'
+type: node
+plugin: 'flag_action:like_employee_unflag'
+configuration:
+  flag_id: like_employee
+  flag_action: unflag

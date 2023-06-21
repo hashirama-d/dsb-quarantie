@@ -1,0 +1,21 @@
+uuid: 8aed5652-a87d-4322-869f-914b166ddb47
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_read_more_link
+    - node.type.service
+id: node.service.field_read_more_link
+field_name: field_read_more_link
+entity_type: node
+bundle: service
+label: 'Read More Link'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 'Read More'
+default_value_callback: ''
+settings: {  }
+field_type: string

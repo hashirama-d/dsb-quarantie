@@ -1,0 +1,32 @@
+uuid: 31a7d992-b560-4123-af4b-1ef68ac48325
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_us_block
+    - field.storage.block_content.field_conatct_us_form
+    - webform.webform.contact_us_webform
+  module:
+    - webform
+id: block_content.contact_us_block.field_conatct_us_form
+field_name: field_conatct_us_form
+entity_type: block_content
+bundle: contact_us_block
+label: 'Conatct Us Form'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    target_uuid: 6e50f48b-144a-468b-9f02-78e5c8e95bf2
+    default_data: ''
+    status: open
+    open: ''
+    close: ''
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: webform

@@ -1,0 +1,21 @@
+uuid: 2bcbb8b5-b2b1-42b1-a2f3-bd4859c5eac2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_social_li
+    - node.type.employee
+  module:
+    - social_link_field
+id: node.employee.field_social_li
+field_name: field_social_li
+entity_type: node
+bundle: employee
+label: 'Social links'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: social_links

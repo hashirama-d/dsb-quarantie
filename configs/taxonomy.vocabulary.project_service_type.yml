@@ -1,0 +1,8 @@
+uuid: 7ef1035c-cbd9-4191-9137-b45dd207d8f5
+langcode: en
+status: true
+dependencies: {  }
+name: 'Project Service Type'
+vid: project_service_type
+description: ''
+weight: 0

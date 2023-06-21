@@ -1,0 +1,29 @@
+uuid: 9d626c3e-7c90-45b3-a6bc-5b7300edd25f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.flagging.field_like_icon
+    - flag.flag.like_employee
+    - media.type.image
+id: flagging.like_employee.field_like_icon
+field_name: field_like_icon
+entity_type: flagging
+bundle: like_employee
+label: 'Like icon'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

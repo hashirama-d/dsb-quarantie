@@ -1,0 +1,14 @@
+uuid: ea1a04a7-6768-458e-844a-edd0dc4329a1
+langcode: en
+status: true
+dependencies:
+  module:
+    - search_api_db
+id: database
+name: Database
+description: ''
+backend: search_api_db
+backend_config:
+  database: 'default:default'
+  min_chars: 1
+  matching: words

@@ -1,0 +1,29 @@
+uuid: 6474107a-c671-4123-9b8e-2da81e7af4b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.projects_content
+  module:
+    - system
+    - views
+  theme:
+    - exam
+id: views_block__projects_content_block_2
+theme: exam
+region: content
+weight: -8
+provider: null
+plugin: 'views_block:projects_content-block_2'
+settings:
+  id: 'views_block:projects_content-block_2'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

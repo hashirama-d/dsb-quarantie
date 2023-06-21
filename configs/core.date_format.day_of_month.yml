@@ -1,0 +1,8 @@
+uuid: 2c794ce1-56f8-4f17-bdb2-62ef1d3cb143
+langcode: en
+status: true
+dependencies: {  }
+id: day_of_month
+label: 'Day of Month'
+locked: false
+pattern: d

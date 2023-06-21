@@ -1,0 +1,23 @@
+uuid: 7a5f5a33-329d-4be5-840e-b40c20cc82d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.index_all_content
+  module:
+    - views
+  theme:
+    - exam
+id: exposedformindex_all_contentpage_1
+theme: exam
+region: header
+weight: -10
+provider: null
+plugin: 'views_exposed_filter_block:index_all_content-page_1'
+settings:
+  id: 'views_exposed_filter_block:index_all_content-page_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: 'Search for titles'
+visibility: {  }

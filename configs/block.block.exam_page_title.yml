@@ -1,0 +1,26 @@
+uuid: ca62bed4-981b-4b86-9689-9eb2660c9961
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - exam
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: exam_page_title
+theme: exam
+region: content
+weight: -12
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/news/search\r\n/team\r\n/projects\r\n/services\r\n/clients\r\n/contact-us"

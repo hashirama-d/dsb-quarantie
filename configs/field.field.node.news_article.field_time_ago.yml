@@ -1,0 +1,21 @@
+uuid: dbdb5912-5058-4dc0-a044-8f5c76b9bceb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_time_ago
+    - node.type.news_article
+id: node.news_article.field_time_ago
+field_name: field_time_ago
+entity_type: node
+bundle: news_article
+label: 'Time ago'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1685457819
+default_value_callback: ''
+settings: {  }
+field_type: timestamp

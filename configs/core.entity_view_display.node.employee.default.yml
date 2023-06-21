@@ -1,0 +1,204 @@
+uuid: d06fd2f8-8ba1-4e1c-b8d9-23f0561a5b23
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.employee.body
+    - field.field.node.employee.field_main
+    - field.field.node.employee.field_occupation
+    - field.field.node.employee.field_read_more_link
+    - field.field.node.employee.field_social_li
+    - node.type.employee
+  module:
+    - field_group
+    - layout_builder
+    - layout_discovery
+    - media
+    - social_link_field
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          a5e60653-1a11-47ea-b6d2-e7b8484c2bbb:
+            uuid: a5e60653-1a11-47ea-b6d2-e7b8484c2bbb
+            region: content
+            configuration:
+              id: 'field_block:node:employee:field_occupation'
+              label: Occupation
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 7
+            additional: {  }
+          78b927b8-29ec-4001-ad11-55af620abdda:
+            uuid: 78b927b8-29ec-4001-ad11-55af620abdda
+            region: content
+            configuration:
+              id: 'field_block:node:employee:field_social_li'
+              label: 'Social links'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: font_awesome
+                label: hidden
+                settings:
+                  new_tab: 1
+                  icon_type: square
+                  orientation: vertical
+                third_party_settings: {  }
+            weight: 9
+            additional: {  }
+          36b52bfa-0caa-4f89-a225-57e263e82231:
+            uuid: 36b52bfa-0caa-4f89-a225-57e263e82231
+            region: content
+            configuration:
+              id: 'extra_field_block:node:employee:flag_like_employee'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 10
+            additional: {  }
+          813e13d8-7581-4088-827c-75af0204b412:
+            uuid: 813e13d8-7581-4088-827c-75af0204b412
+            region: content
+            configuration:
+              id: 'field_block:node:employee:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 6
+            additional: {  }
+          c38c57a2-4124-4e24-acab-db492c5c7214:
+            uuid: c38c57a2-4124-4e24-acab-db492c5c7214
+            region: content
+            configuration:
+              id: 'field_block:node:employee:field_main'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: media_thumbnail
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 5
+            additional: {  }
+          4f3e8a96-c53b-4914-b548-b18f24884295:
+            uuid: 4f3e8a96-c53b-4914-b548-b18f24884295
+            region: content
+            configuration:
+              id: 'field_block:node:employee:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 11
+            additional: {  }
+        third_party_settings: {  }
+  field_group:
+    group_social_likes:
+      children: {  }
+      label: 'social likes'
+      parent_name: ''
+      region: hidden
+      weight: 8
+      format_type: html_element
+      format_settings:
+        classes: social-likes
+        show_empty_fields: false
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+id: node.employee.default
+targetEntityType: node
+bundle: employee
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_main:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_occupation:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_social_li:
+    type: font_awesome
+    label: hidden
+    settings:
+      icon_type: common
+      orientation: vertical
+      new_tab: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  flag_like_employee:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_read_more_link: true
+  search_api_excerpt: true

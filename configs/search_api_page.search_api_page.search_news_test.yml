@@ -1,0 +1,27 @@
+uuid: 9547d430-cd26-47ae-b2d1-accd3e50bcb4
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.news_index
+id: search_news_test
+label: 'Search News Test'
+path: search/news
+clean_url: true
+show_all_when_no_keys: false
+index: news_index
+limit: 10
+searched_fields:
+  field_news_content: field_news_content
+  node_body_processed: node_body_processed
+  node_news_name: node_news_name
+  summary: summary
+  title: title
+style: view_modes
+view_mode_configuration:
+  'entity:node':
+    default: teaser
+    overrides:
+      news_article: ''
+show_search_form: true
+parse_mode: direct

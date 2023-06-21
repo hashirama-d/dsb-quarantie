@@ -1,0 +1,340 @@
+uuid: 6158de46-d19a-4609-ae62-8a6342476e78
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.news_article.body
+    - field.field.node.news_article.field_date_day
+    - field.field.node.news_article.field_date_year
+    - field.field.node.news_article.field_main
+    - field.field.node.news_article.field_month_of_creation
+    - field.field.node.news_article.field_news_content
+    - field.field.node.news_article.field_news_topic
+    - field.field.node.news_article.field_read_more_link
+    - field.field.node.news_article.field_time_ago
+    - field.field.node.news_article.field_writer
+    - node.type.news_article
+  module:
+    - datetime
+    - field_group
+    - layout_builder
+    - layout_discovery
+    - media
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_date_of_creation:
+      children:
+        - field_date_day
+        - field_month_of_creation
+        - field_date_year
+      label: 'Date of creation'
+      parent_name: ''
+      region: content
+      weight: 0
+      format_type: html_element
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: section_time
+          context_mapping: {  }
+        components:
+          977b79ad-ccc2-49fb-8a49-f38057be6b77:
+            uuid: 977b79ad-ccc2-49fb-8a49-f38057be6b77
+            region: content
+            configuration:
+              id: 'field_block:node:news_article:field_date_day'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: datetime_default
+                label: hidden
+                settings:
+                  timezone_override: ''
+                  format_type: day_of_month
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          3252b0f8-20f5-4fa2-b3dd-373bc83c61c0:
+            uuid: 3252b0f8-20f5-4fa2-b3dd-373bc83c61c0
+            region: content
+            configuration:
+              id: 'field_block:node:news_article:field_date_year'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: datetime_default
+                label: hidden
+                settings:
+                  timezone_override: ''
+                  format_type: html_year
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          434bc4ec-e84a-4660-9639-1a404506bc33:
+            uuid: 434bc4ec-e84a-4660-9639-1a404506bc33
+            region: content
+            configuration:
+              id: 'field_block:node:news_article:field_month_of_creation'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: datetime_default
+                label: hidden
+                settings:
+                  timezone_override: ''
+                  format_type: month_of_year
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: section_head
+          context_mapping: {  }
+        components:
+          4d62e3ad-b670-4c01-9a27-2108be0ee4aa:
+            uuid: 4d62e3ad-b670-4c01-9a27-2108be0ee4aa
+            region: content
+            configuration:
+              id: 'field_block:node:news_article:field_main'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: media_thumbnail
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          90ad2fe1-444f-4878-b93b-06b6d7e2e13e:
+            uuid: 90ad2fe1-444f-4878-b93b-06b6d7e2e13e
+            region: content
+            configuration:
+              id: 'field_block:node:news_article:field_writer'
+              label: Writer
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: inline
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          0cf8b2b2-7bf7-45c4-a559-12e901c4f011:
+            uuid: 0cf8b2b2-7bf7-45c4-a559-12e901c4f011
+            region: content
+            configuration:
+              id: 'field_block:node:news_article:field_news_topic'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          c461945d-6e5b-4519-bba2-bd15843291e3:
+            uuid: c461945d-6e5b-4519-bba2-bd15843291e3
+            region: content
+            configuration:
+              id: 'field_block:node:news_article:field_time_ago'
+              label: 'Time ago'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: timestamp_ago
+                label: hidden
+                settings:
+                  future_format: '@interval hence'
+                  past_format: '@interval ago'
+                  granularity: 1
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+        third_party_settings: {  }
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: section_body
+          context_mapping: {  }
+        components:
+          af353e4c-1702-4b48-8b18-808adb283eae:
+            uuid: af353e4c-1702-4b48-8b18-808adb283eae
+            region: content
+            configuration:
+              id: 'field_block:node:news_article:body'
+              label: Body
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_summary_or_trimmed
+                label: hidden
+                settings:
+                  trim_length: 250
+                third_party_settings: {  }
+            weight: 15
+            additional: {  }
+          fb820ee9-5a2c-4a78-b245-37ed87b63743:
+            uuid: fb820ee9-5a2c-4a78-b245-37ed87b63743
+            region: content
+            configuration:
+              id: 'field_block:node:news_article:field_read_more_link'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
+            weight: 16
+            additional: {  }
+          0bc5896e-c9b4-4ad5-8e2a-7a60add4f65c:
+            uuid: 0bc5896e-c9b4-4ad5-8e2a-7a60add4f65c
+            region: content
+            configuration:
+              id: 'field_block:node:news_article:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: true
+                third_party_settings: {  }
+            weight: 14
+            additional: {  }
+        third_party_settings: {  }
+id: node.news_article.teaser
+targetEntityType: node
+bundle: news_article
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 250
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_date_day:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: day_of_month
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_date_year:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: html_year
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_main:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_month_of_creation:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: month_of_year
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_news_topic:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_read_more_link:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: true
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_time_ago:
+    type: timestamp_ago
+    label: hidden
+    settings:
+      future_format: '@interval hence'
+      past_format: '@interval ago'
+      granularity: 2
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_writer:
+    type: text_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+hidden:
+  field_news_content: true
+  links: true
+  search_api_excerpt: true

@@ -1,0 +1,8 @@
+uuid: fea55d03-b83d-4036-a198-615aa279cf37
+langcode: en
+status: true
+dependencies: {  }
+id: contact_us_block
+label: 'Contact us Block'
+revision: 0
+description: ''

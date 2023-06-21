@@ -1,0 +1,68 @@
+uuid: a77bab8f-ada9-450e-81ac-622a1d7d8352
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.client.body
+    - field.field.node.client.field_client_webpage_link
+    - field.field.node.client.field_image
+    - node.type.client
+  module:
+    - image_link_formatter
+    - layout_builder
+    - layout_discovery
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          690058cf-398b-4f54-8390-c1a52b4f649b:
+            uuid: 690058cf-398b-4f54-8390-c1a52b4f649b
+            region: content
+            configuration:
+              id: 'field_block:node:client:field_image'
+              label: Image
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image_link_formatter
+                label: hidden
+                settings:
+                  image_style: ''
+                  image_link: field_client_webpage_link
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+id: node.client.default
+targetEntityType: node
+bundle: client
+mode: default
+content:
+  field_image:
+    type: image_link_formatter
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: field_client_webpage_link
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  body: true
+  field_client_webpage_link: true
+  links: true
+  search_api_excerpt: true

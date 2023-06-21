@@ -1,0 +1,41 @@
+uuid: 8ce569d2-3f55-496e-a0d6-b4ac96d2b450
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_news_content
+    - node.type.news_article
+    - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.remote_video
+    - paragraphs.paragraphs_type.text_paragraph
+  module:
+    - entity_reference_revisions
+id: node.news_article.field_news_content
+field_name: field_news_content
+entity_type: node
+bundle: news_article
+label: 'News Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      image: image
+      remote_video: remote_video
+      text_paragraph: text_paragraph
+    negate: 0
+    target_bundles_drag_drop:
+      image:
+        weight: 4
+        enabled: true
+      remote_video:
+        weight: 5
+        enabled: true
+      text_paragraph:
+        weight: 6
+        enabled: true
+field_type: entity_reference_revisions

@@ -1,0 +1,159 @@
+uuid: ca9373d5-baad-43fa-a4ef-2f3c11cebd53
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.project.body
+    - field.field.node.project.field_content
+    - field.field.node.project.field_main
+    - field.field.node.project.field_project_service_type
+    - field.field.node.project.field_read_more_link
+    - node.type.project
+  module:
+    - entity_reference_revisions
+    - layout_builder
+    - layout_discovery
+    - media
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          c8fb45d5-e28a-473d-abb7-828b961c38c3:
+            uuid: c8fb45d5-e28a-473d-abb7-828b961c38c3
+            region: content
+            configuration:
+              id: 'field_block:node:project:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          1584c25b-0323-4b11-b8a6-cc6cd2267159:
+            uuid: 1584c25b-0323-4b11-b8a6-cc6cd2267159
+            region: content
+            configuration:
+              id: 'field_block:node:project:field_content'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: hidden
+                settings:
+                  view_mode: default
+                  link: ''
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          31b412ed-4da1-475a-adbb-bf2f2abb1e69:
+            uuid: 31b412ed-4da1-475a-adbb-bf2f2abb1e69
+            region: content
+            configuration:
+              id: 'field_block:node:project:field_project_service_type'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_label
+                label: hidden
+                settings:
+                  link: true
+                third_party_settings: {  }
+            weight: 4
+            additional: {  }
+          ac7f685d-c94c-48ca-8c0c-b69cec0c7bda:
+            uuid: ac7f685d-c94c-48ca-8c0c-b69cec0c7bda
+            region: content
+            configuration:
+              id: 'field_block:node:project:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          50ea0aa0-ce25-42b0-81a0-91641a7716a4:
+            uuid: 50ea0aa0-ce25-42b0-81a0-91641a7716a4
+            region: content
+            configuration:
+              id: 'field_block:node:project:field_main'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: media_thumbnail
+                label: hidden
+                settings:
+                  image_link: ''
+                  image_style: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+id: node.project.default
+targetEntityType: node
+bundle: project
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_content:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_main:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_project_service_type:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  field_read_more_link: true
+  links: true
+  search_api_excerpt: true

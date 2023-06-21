@@ -1,0 +1,50 @@
+uuid: 16219451-7ae7-4e56-81a4-dea58f48e218
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.news_topic
+    - views.view.news_term
+  module:
+    - layout_builder
+    - layout_discovery
+    - text
+    - views
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          daf09cdf-301f-4ad9-8471-e21bc57cc28c:
+            uuid: daf09cdf-301f-4ad9-8471-e21bc57cc28c
+            region: content
+            configuration:
+              id: 'views_block:news_term-block_1'
+              label: ''
+              label_display: visible
+              provider: views
+              context_mapping: {  }
+              views_label: ''
+              items_per_page: none
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+id: taxonomy_term.news_topic.default
+targetEntityType: taxonomy_term
+bundle: news_topic
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

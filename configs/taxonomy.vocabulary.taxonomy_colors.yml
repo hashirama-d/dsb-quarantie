@@ -1,0 +1,8 @@
+uuid: fe8918ef-40cd-4399-865d-a13d08122895
+langcode: en
+status: true
+dependencies: {  }
+name: 'Taxonomy Colors'
+vid: taxonomy_colors
+description: 'Color Tags for taxonomies'
+weight: 0

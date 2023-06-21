@@ -1,0 +1,23 @@
+uuid: 423c1046-4370-4cd5-91d6-694c4f186ae0
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.about_block
+    - field.storage.block_content.field_read_more
+  module:
+    - link
+id: block_content.about_block.field_read_more
+field_name: field_read_more
+entity_type: block_content
+bundle: about_block
+label: 'Read more'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 1
+field_type: link

@@ -1,0 +1,22 @@
+uuid: 9384aa83-4d9f-4479-b25e-cd831723bc55
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: projects_service_type_pattern
+label: 'Projects service type pattern'
+type: 'canonical_entities:taxonomy_term'
+pattern: '/projects/[term:name]'
+selection_criteria:
+  58ba972a-c837-4940-8aff-bb06f150cec4:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: 58ba972a-c837-4940-8aff-bb06f150cec4
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      project_service_type: project_service_type
+selection_logic: and
+weight: -5
+relationships: {  }
