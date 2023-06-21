@@ -1,0 +1,24 @@
+.user-login-form {
+  margin: 50px 0;
+  color: $branding-bg;
+  input {
+    height: 40px;
+    padding: 0 10px;
+    border: 2px solid #E8E8E8;
+    display: block;
+    margin: 10px 0;
+    max-width: 100%;
+  }
+  .form-submit {
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    background-color: $branding-bg;
+    color: #ffffff;
+    padding: 10px 20px;
+    &:hover {
+      background-color: rgba($branding-bg, 0.9);
+    }
+  }
+}
+

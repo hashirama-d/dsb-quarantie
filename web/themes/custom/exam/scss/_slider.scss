@@ -1,0 +1,25 @@
+// start styles for client slider on homepage
+#block-views-block-clients-content-block-2 {
+  margin-bottom: 160px;
+  @media (max-width: $tablet) {
+    margin-bottom: 100px;
+  }
+  @media (max-width: $phone) {
+    margin-bottom: 70px;
+  }
+  .slick-slide {
+    width: 150px;
+    a, img {
+      width: 100%;
+    }
+  }
+  .slick-track   {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  h2 {
+    @include section-front-title();
+  }
+}
+

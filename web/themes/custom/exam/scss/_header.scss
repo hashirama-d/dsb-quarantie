@@ -1,0 +1,226 @@
+// start styles for header
+.header {
+  position: relative;
+  padding-top: 40px;
+  @media (max-width: $desktopSmall) {
+    padding-top: 0;
+  }
+  .contextual-region {
+    position: unset;
+  }
+  .region-header {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #fff;
+    box-shadow: 0px 5px 10px -5px rgba(0,0,0,0.6);
+    // start styles for branding in header
+    .block-system-branding-block {
+      height: 115px;
+      min-width: 235px;
+      background-color: $branding-bg;
+      font-family: $branding-font;
+      color: #c3c2c7;
+      text-align: center;
+      font-size: 15px;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-right: 15px;
+      @media (max-width: 580px) {
+        height: 90px;
+        padding: 0 10px;
+        font-size: 12px;
+        min-width: 200px;
+        margin-right: 0;
+      }
+      .site-name {
+        color: $branding-color;
+        font-weight: 500;
+        font-size: 32px;
+        @media (max-width: 580px) {
+          font-size: 24px;
+        }
+      }
+    }
+    // end styles for branding in header
+
+    // start stylings for menu
+    .block-menu {
+      margin: 0 auto;
+      //@media (max-width: $tablet) {
+      //  width: calc(100% - 250px);
+      //}
+      display: flex;
+      .burger-menu-btn {
+        display: none;
+        outline: none;
+        border: none;
+        background-color: transparent;
+        background-image: url("https://img.icons8.com/ios-glyphs/60/menu--v1.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 60px;
+        height: 60px;
+        align-self: center;
+        @media (max-width: $desktop) {
+          display: block;
+          margin-left: auto;
+        }
+        @media (max-width: $tablet) {
+          margin-right: 10px;
+        }
+        @media (max-width: 580px) {
+          width: 50px;
+          height: 50px;
+          margin-right: 0;
+        }
+      }
+      .menu {
+        display: flex;
+        height: 100%;
+        margin: 0;
+        align-items: flex-end;
+        min-width: 200px;
+        @media (max-width: $desktop) {
+          display: none;
+        }
+        &.active {
+          @media (max-width: $desktop) {
+            z-index: 20;
+            width: 100%;
+            height: auto;
+            position: absolute;
+            left: 0;
+            top: 115px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #ffffff;
+            border: 2px solid $branding-color;
+            .menu-item a {
+              margin-top: 10px;
+              padding-bottom: 15px;
+            }
+            .menu-icon-1 a { // styles for home icon
+              height: 80px;
+            }
+          }
+          @media (max-width: $tablet) {
+            top: 185px;
+          }
+          @media (max-width: $phone) {
+            top: 160px;
+          }
+        }
+        &-item a {
+          margin: 0 10px;
+          font-family: $text-font;
+          text-transform: uppercase;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          border-bottom: 5px solid transparent;
+          padding-bottom: 40px;
+
+          &.is-active, &:hover {
+            border-bottom: 5px solid $branding-color;
+          }
+        }
+
+        &-icon-1 { // styles for home icon
+          padding-bottom: 0;
+          a {
+            font-size: 0;
+            line-height: 0;
+            display: block;
+            width: 0px;
+            height: 110px;
+          }
+        }
+      }
+    }
+    // end stylings for menu
+
+    // start stylings for social links field in header
+    #block-sociallinks {
+      @media (max-width: $desktopSmall) {
+        display: none;
+      }
+      .social-link-field {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        margin: 0 10px;
+        li {
+          padding: 0 5px;
+          width: 35px;
+          height: 25px;
+          i {
+            font-size: 25px;
+            color: $branding-color;
+          }
+        }
+      }
+    }
+    // end stylings for social links field in header
+
+    // start stylings for search form in header
+    .block-views-exposed-filter-blockindex-all-content-page-1 {
+      display: flex;
+      align-items: center;
+      padding-right: 10px;
+      //@media (max-width: $tablet) {
+      //  margin-left: auto;
+      //}
+      @media (max-width: $phone) {
+        margin: 0 auto;
+        padding-right: 0;
+      }
+      .form--inline {
+        display: flex;
+        .form-item-search-api-fulltext {
+          margin: auto 0;
+          input:focus {
+            outline: none;
+            border: 2px solid $gray;
+            border-left-width: 1px;
+          }
+        }
+        label {
+          display: none;
+        }
+        .form-text {
+          max-width: 168px;
+          @media (max-width: 580px) {
+            max-width: 120px;
+          }
+          @media (max-width: $phone) {
+            max-width: 240px;
+          }
+          height: 40px;
+          padding: 0 10px;
+          border: 2px solid $gray;
+          border-right-width: 1px;
+
+        }
+        .js-form-submit {
+          font-size: 0;
+          width: 40px;
+          height: 40px;
+          background-image: url("https://img.icons8.com/ios/50/E6E6E6/search--v1.png");
+          background-size: cover;
+          background-repeat: no-repeat;
+          outline: none;
+          background-color: transparent;
+          border: 2px solid $gray;
+          border-left-width: 1px;
+
+        }
+      }
+    }
+    // start stylings for search form in header
+  }
+}
+// start styles for header

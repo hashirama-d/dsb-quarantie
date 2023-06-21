@@ -1,0 +1,38 @@
+// start generic settings for pages
+html, body, .dialog-off-canvas-main-canvas, .page {
+  height: 100%;
+}
+.page {
+  display: flex;
+  flex-direction: column;
+}
+// end generic settings for pages
+
+// start styles for page title
+.page-title {
+  @include section-front-title();
+  margin-top: 50px;
+}
+// end styles for page title
+
+// start generic settings for social link fields
+.social-link-field {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  margin: 0 10px;
+  li {
+    padding: 0 5px;
+    width: 35px;
+    height: 25px;
+    i {
+      font-size: 25px;
+      color: $branding-color;
+    }
+  }
+}
+// end generic settings for social link fields
+
+
+
+

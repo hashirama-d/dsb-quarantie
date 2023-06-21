@@ -4,26 +4,7 @@ global:
       "https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700&display=swap": { external: true }
       "https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap": { external: true }
     layout:
-      css/variables.css: {}
-      css/mixins.css: {}
-      css/reset.css: {}
-      css/global.css: {}
-      css/container.css: {}
-      css/header.css: {}
-      css/footer.css: {}
-      css/views.css: {}
-      css/banner.css: {}
-      css/slider.css: {}
-      css/team.css: {}
-      css/services.css: {}
-      css/projects.css: {}
-      css/about.css: {}
-      css/news.css: {}
-      css/contact-us.css: {}
-      css/clients.css: {}
-      css/search.css: {}
-      css/login.css: {}
-      css/profile.css: {}
+      css/style.css: {}
 
 global-scripts:
   js:

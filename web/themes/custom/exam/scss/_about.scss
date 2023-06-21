@@ -1,0 +1,91 @@
+// start styles of about block on the front page
+
+#block-aboutblock {
+  max-width: 1240px;
+  position: relative;
+  display: flex;
+  margin: 90px auto;
+  padding: 15px 0;
+  align-items: center;
+  border-top: 5px solid $branding-bg;
+  border-bottom: 5px solid $branding-color;
+  @media (max-width: $tablet) {
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 10px;
+    margin: 60px auto;
+  }
+  .field--name-field-title {
+    font-size: 26px;
+    font-weight: 700;
+    font-family: $text-font;
+    color: $branding-bg;
+    text-transform: uppercase;
+    margin: 0 15px 0 10px;
+  }
+  &::before, &::after {
+    position: absolute;
+    content: "";
+    top: -5px;
+    height: calc(100% + 10px);
+    width: 10px;
+    background-color: #fff;
+  }
+  &::after {
+    right: 0;
+  }
+  &::before {
+    left: 0;
+  }
+  .field--name-body {
+    @include front-item-text-teaser();
+    font-size: 20px;
+    margin: 0;
+    padding: 0 10px;
+    @media (max-width: $phone) {
+      font-size: 18px;
+    }
+  }
+  .field--name-field-read-more {
+    @include read-more-btn-teaser();
+    padding: 0;
+    background-color: $branding-color;
+    &:hover {
+      background-color: rgba($branding-color, 0.9);
+    }
+    color: $white;
+    margin: 0 10px 0 auto;
+    a {
+      display: inline-block;
+      text-align: center;
+    }
+    @media (max-width: $tablet) {
+      margin: 0;
+    }
+  }
+}
+
+// end styles of about block on the front page
+
+// start styles of about page
+
+.block-block-content482e77bb-323d-4dce-88bf-944dcf15f018 {
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  .layout__region--content {
+    @extend .container;
+  }
+  .field--name-field-title {
+    font-weight: 700;
+    text-align: center;
+    @include section-front-title();
+    margin-top: 50px;
+  }
+  .paragraph--type--text-paragraph {
+    margin-bottom: 25px;
+    font-size: 24px;
+    @media (max-width: $phone) {
+      font-size: 18px;
+    }
+  }
+}

@@ -1,0 +1,157 @@
+// start generic styles for team block on homepage
+#block-views-block-team-content-block-2 {
+  h2 {
+    @include section-front-title();
+  }
+
+  margin-bottom: 180px;
+  @media (max-width: $tablet) {
+    margin-bottom: 120px;
+  }
+  @media (max-width: $phone) {
+    margin-bottom: 90px;
+  }
+}
+// end generic styles for team block on homepage
+
+// start styles for employee node (teaser)
+.node--employee-teaser {
+  .layout__region--content {
+    .field--name-field-main {
+      display: flex;
+      justify-content: center;
+      img {
+        width: 100%;
+        max-width: 290px;
+        height: auto;
+        margin-bottom: 35px;
+      }
+    }
+    .flag-like-employee {
+      float: right;
+      margin-right: 15%;
+    }
+    .block-field-blocknodeemployeefield-social-li {
+      display: inline;
+      .social-link-field {
+        width: 50%;
+        display: inline-flex;
+        margin-left: 10%;
+      }
+    }
+    .field--name-title {
+      @include front-item-title-teaser();
+    }
+    .field--name-field-occupation {
+      @include front-item-text-teaser();
+    }
+    .field--name-field-read-more-link {
+      @include read-more-btn-teaser();
+    }
+  }
+}
+// end styles for employee node (teaser)
+
+// start styles for employee node (full)
+.node--employee-full {
+  margin: 100px 0;
+  @media (max-width: $tablet) {
+    margin: 50px 0;
+  }
+  .field--name-title {
+    display: block;
+    width: 100%;
+    text-align: left;
+    font-family: $text-font;
+    font-weight: 600;
+    color: $branding-bg;
+    text-transform: uppercase;
+    font-size: 34px;
+    margin: 60px 0 40px;
+    @media (max-width: $tablet) {
+      font-size: 30px;
+    }
+    @media (max-width: $phone) {
+      font-size: 26px;
+      margin: 20px 0;
+    }
+  }
+  .field--name-field-occupation {
+    font-size: 18px;
+    display: flex;
+    color: $branding-bg;
+    margin-bottom: 10px;
+    .field__label {
+      font-weight: 600;
+    }
+    @media (max-width: $phone) {
+      font-size: 14px;
+    }
+  }
+  .field--name-field-main {
+    float: left;
+    width: 300px;
+    height: 280px;
+    @media (max-width: $tablet) {
+      width: 250px;
+      height: 230px;
+    }
+    @media (max-width: $phone) {
+      float: unset;
+      display: flex;
+      justify-content: center;
+    }
+    img {
+      width: 280px;
+      height: 280px;
+      @media (max-width: $tablet) {
+        width: 230px;
+        height: 230px;
+      }
+    }
+  }
+  .social-link-field {
+    margin-bottom: 10px;
+    margin-left: 0;
+  }
+  .flag-like-employee {
+    margin-bottom: 10px;
+  }
+  .field--name-body {
+    font-size: 28px;
+    font-family: $text-font;
+    margin-bottom: 30px;
+    @media (max-width: $tablet) {
+      font-size: 24px;
+    }
+    @media (max-width: $phone) {
+      font-size: 18px;
+    }
+  }
+}
+// end styles for employee node (full)
+
+// start styles for like icons on employee content type
+.block-extra-field-blocknodeemployeeflag-like-employee {
+  display: inline;
+  .action-flag a{
+    background: url("https://img.icons8.com/ios/50/000000/like--v1.png") 0 0 no-repeat;
+    background-size: cover;
+    display: inline-block ;
+    height: 20px;
+    width: 20px;
+    text-indent: -99999em;
+    overflow: hidden;
+  }
+
+  .action-unflag a{
+    background:url("https://img.icons8.com/ios-filled/50/ff8de2/like--v1.png") 0 0 no-repeat;
+    background-size: cover;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    text-indent: -99999em;
+    overflow: hidden;
+  }
+}
+// end styles for like icons on employee content type
